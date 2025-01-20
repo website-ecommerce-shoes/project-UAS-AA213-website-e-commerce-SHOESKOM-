@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #2b0148;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .checkout-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .checkout-header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .product-summary {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .product-summary img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .product-details p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .payment-method {
+            margin-bottom: 20px;
+        }
+
+        .payment-method label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .payment-method select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .total-payment {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .checkout-actions {
+            text-align: center;
+        }
+
+        .checkout-actions button {
+            padding: 10px 20px;
+            background-color: #6e00b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-actions button:hover {
+            background-color: #550091;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content h2 {
+            margin: 0 0 10px;
+        }
+
+        .modal-content p {
+            color: #555;
+        }
+
+        .modal-content button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6e00b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-content button:hover {
+            background-color: #550091;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">SHOESKOM</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="payment.html" class="active">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1>Checkout</h1>
+        </div>
+
+        <div class="product-summary">
+            <img src="asses/products/pr2.png" alt="Product">
+            <div class="product-details">
+                <h4>Nike Air Max</h4>
+                <p>Quantity: 1</p>
+                <p>Price: Rp. 1.199.000</p>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <label for="payment">Select Size:</label>
+            <select id="size" name="size">
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>  
+            </select>
+        </div>
+
+        <div class="payment-method">
+            <label for="payment">Select Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="ewallet">E-Wallet</option>
+                <option value="qr">QR Code</option>
+                <option value="mobile">Mobile Banking</option>
+                <option value="credit">Credit Card</option>
+                <option value="virtual">Virtual Account</option>
+                <option value="cod">Cash on Delivery</option>
+            </select>
+        </div>
+
+        <div class="total-payment">
+            <span>Total Payment:</span>
+            <span>Rp. 1.199.000</span>
+        </div>
+
+        <div class="checkout-actions">
+            <button type="button" id="confirmPaymentBtn">Confirm Payment</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your purchase. Redirecting to the homepage...</p>
+            <button id="closeModalBtn">OK</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('confirmPaymentBtn').addEventListener('click', function () {
+            const modal = document.getElementById('successModal');
+            modal.style.display = 'flex';
+
+            // Redirect to index.html after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        });
+
+        document.getElementById('closeModalBtn').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>

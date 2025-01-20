@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #2b0148;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .wishlist-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wishlist-header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .wishlist-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .wishlist-item {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .wishlist-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .wishlist-item .item-details {
+            flex: 1;
+        }
+
+        .wishlist-item .item-details h4 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .wishlist-item .item-details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .wishlist-item .item-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .wishlist-item button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .wishlist-item .btn-add-to-cart {
+            background-color: #6e00b9;
+            color: white;
+        }
+
+        .wishlist-item .btn-add-to-cart:hover {
+            background-color: #550091;
+        }
+
+        .wishlist-item .btn-remove {
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        .wishlist-item .btn-remove:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">SHOESKOM</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="keranjang.html" class="active">Wishlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wishlist-container">
+        <div class="wishlist-header">
+            <h1>Your Wishlist</h1>
+        </div>
+
+        <div class="wishlist-items">
+            <div class="wishlist-item">
+                <img src="asses/products/pr1.png" alt="Product">
+                <div class="item-details">
+                    <h4>Nike Running Shoes</h4>
+                    <p>Price: Rp. 1.099.000</p>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-add-to-cart" onclick="window.location.href='payment.html'">Add to Cart</button>
+                    <button class="btn-remove" onclick="window.location.href='payment.html'">Remove</button>
+                </div>                
+            </div>
+
+            <div class="wishlist-item">
+                <img src="asses/products/pr2.png" alt="Product">
+                <div class="item-details">
+                    <h4>Nike Sneakers</h4>
+                    <p>Price: Rp. 1.099.000</p>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-add-to-cart" onclick="window.location.href='payment.html'">Add to Cart</button>
+                    <button class="btn-remove" onclick="window.location.href='payment.html'">Remove</button>
+                </div>                
+            </div>
+
+            <div class="wishlist-item">
+                <img src="asses/products/pr3.png" alt="Product">
+                <div class="item-details">
+                    <h4>Nike Sports Shoes</h4>
+                    <p>Price: Rp. 1.199.000</p>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-add-to-cart" onclick="window.location.href='payment.html'">Add to Cart</button>
+                    <button class="btn-remove" onclick="window.location.href='payment.html'">Remove</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

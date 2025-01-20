@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Shoes Ecommerce</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="index.html" class="logo">SHOESKOM</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">New Arrival</a></li>
+                    <li><a href="index.html">Best Collection</a></li>
+                    <li><a href="index.html">About</a></li>
+                </ul>
+                <div class="nav-icon">
+                    <span><i class="fa-solid fa-heart"></i></span>
+                    <span>
+                        <a href="keranjang.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </span>
+                    <span><a href="login.html" class="btn-auth login">Login</a></span>
+                    <span><a href="register.html" class="btn-auth register">Sign Up</a></span>
+                    <span><a href="profile.html"><i class="fa-solid fa-user"></i></a></span> 
+                </div>
+            </nav>
+        </div>
+    </header>
+
+            <style>
+                .auth-buttons {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                .btn-auth {
+                    padding: 8px 15px;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 600;
+                    transition: 0.3s;
+                }
+
+                .btn-auth.login:hover {
+                    background-color: rgb(56, 56, 175); /* Warna biru */
+                    color: #fff;
+                }
+
+                .btn-auth.register:hover {
+                    background-color: rgb(56, 56, 175); /* Warna biru */
+                    color: #fff;
+                }
+
+                .btn-auth {
+                    background: none; /* Tidak ada latar belakang */
+                    border: none; /* Menghapus border */
+                    padding: 0; /* Menghapus padding */
+                    text-decoration: none; /* Menghapus garis bawah */
+                    color: white; /* Warna default teks */
+                    font-weight: bold;
+                    font-size: 14px;
+                    cursor: pointer; /* Ubah kursor menjadi pointer */
+                    transition: color 0.3s; /* Animasi perubahan warna */
+                }
+
+                .btn-auth:hover {
+                    color: #ff7bff; /* Warna saat di-hover */
+                }
+
+                .btn-auth.login:active {
+                    color: rgb(56, 56, 175); /* Warna teks saat ditekan */
+                }
+
+                .btn-auth.register {
+                    color: white; /* Warna default teks untuk tombol Sign Up */
+                }
+
+                .btn-auth.register:hover {
+                    color: #ff7bff; /* Warna saat di-hover */
+                }
+
+
+            </style>
+            <i class="fa-solid fa-bars burger_icon"></i>
+        </div>
+    </header>
+    <!-- hero -section -->
+    <main class="container hero">
+        <div class="clr-one"></div>
+        <div class="clr-two"></div>
+        <div class="wrapper">
+            <div class="col col-text" data-aos="fade-right">
+                <h1 class="heading-one">best in style <br> collection <br> <span>for you</span></h1>
+                <p class="sub-text">We Craft The, We Want To Say The Best, <br>
+                    But Through 70 Years Of Experience In The Industry</p>
+                <button class="btn btn-hero">pre-order now</button>
+            </div>
+            <div class="col col-img">
+                <figure data-aos="fade-left">
+                    <img src="asses/hero/hero.png" alt="nike-shoe">
+                </figure>
+                <div class="hero-img-off" data-aos="zoom-in-up">
+                    <h3 class="heading-three">get up to 50% OFF</h3>
+                    <p>Dapatkan harga terbatas segera dengan potongan harga yang menarik! </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- arrival section-->
+    <section class="container arrival">
+        <div class="section-heading">
+            <div class="heading">
+                <h2 class="heading-two">new <span>arrival</span> </h2>
+                <p class="sub-heading">our new collection</p>
+            </div>
+            <button class="btn">see all</button>
+        </div>
+        <div class="wrapper">
+            <div class="col" data-aos="zoom-in-up">
+                <figure>
+                    <img src="asses/new arrival/ar1.png" alt="nike-shoe">
+                </figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.199.000</p>
+                        <button class="shoe-btn btn" id="buyNowBtn">Buy Now</button>
+                        <script>
+                            document.getElementById('buyNowBtn').addEventListener('click', function() {
+                                // Menghilangkan teks tombol
+                                this.textContent = '';
+
+                                // Redirect ke halaman payment.html setelah sedikit delay (opsional)
+                                setTimeout(() => {
+                                    window.location.href = 'payment.html';
+                                }, 200); // Delay 200ms agar efek lebih mulus
+                            });
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col" data-aos="zoom-in-up">
+                <figure>
+                    <img src="asses/new arrival/ar2.png" alt="nike-shoe">
+                </figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.299.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col" data-aos="zoom-in-up">
+                <figure>
+                    <img src="asses/new arrival/ar3.png" alt="nike-shoe">
+                </figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Redirect Button</title>
+            </head>
+            <body>
+                <div class="col" data-aos="zoom-in-up">
+                    <figure>
+                        <img src="asses/new arrival/ar4.png" alt="nike-shoe">
+                    </figure>
+                    <div class="col-body">
+                        <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                        <h3 class="heading-three">Nike Running</h3>
+                        <p class="sub-heading">Air Zoom Pegasus</p>
+                        <div class="col-footer">
+                            <p class="shoe-price">Rp. 1.199.000</p>
+                            <button class="shoe-btn btn buy-now-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+    <script>
+        // Ambil semua tombol dengan class "buy-now-btn"
+        const buttons = document.querySelectorAll('.buy-now-btn');
+
+        // Tambahkan event listener ke setiap tombol
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Redirect ke halaman payment.html
+                window.location.href = 'payment.html';
+            });
+        });
+    </script>
+</body>
+</html>
+
+            
+            <script>
+                // Ambil semua tombol dengan class "buy-now-btn"
+                const buttons = document.querySelectorAll('.buy-now-btn');
+            
+                // Tambahkan event listener ke setiap tombol
+                buttons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        // Menghilangkan teks dari tombol yang diklik
+                        this.textContent = '';
+            
+                        // Redirect ke halaman payment.html setelah sedikit delay (opsional)
+                        setTimeout(() => {
+                            window.location.href = 'payment.html';
+                        }, 200); // Delay 200ms agar efek lebih mulus
+                    });
+                });
+            </script>
+        </div>
+    </section>
+    <!-- ====================  About Us SEction ================== -->
+    <section class="about container">
+        <div class="clr-one"></div>
+        <div class="clr-two"></div>
+        <div class="wrapper">
+            <div class="col-img col" >
+                <div class="get-off" data-aos="zoom-in">
+                    <h4>get up to 50% OFF</h4>
+                    <p class="off-text">dapatkan penawaran terbaik untuk setiap itemnya.</p>
+                </div>
+                <figure data-aos="fade-left">
+                    <img src="asses/about/about-img.png" alt="about-img">
+                </figure>
+            </div>
+            <div class="col-text col" data-aos="fade-right">
+                <p class="sub-heading">about us</p>
+                <h2 class="heading-two"> we provide high <br> quality <span> shoes</span></h2>
+                <p class="about-text">
+                    Shoeskom menghadirkan sepatu berkualitas tinggi dengan desain trendi dan harga terjangkau. Misi kami adalah memberikan kenyamanan dan kepercayaan diri di setiap langkah Anda.
+                </p>
+                <button class="btn">read more</button>
+            </div>
+        </div>
+    </section>
+    <!-- new collection -->
+    <section class="container collection">
+        <!-- section header -->
+        <div class="section-heading">
+            <div class="heading">
+                <p class="sub-heading">best collection</p>
+                <h2 class="heading-two">our new collection</h2>
+            </div>
+            <div class="btn-section">
+                <button class="btn-col btn" data-btn="all">all</button>
+                <button class="btn-col" data-btn="men">men</button>
+                <button class="btn-col" data-btn="women">women</button>
+                <button class="btn-col" data-btn="sports">sports</button>
+            </div>
+        </div>
+        <!-- section wrapper and col -->
+        <div class="grid-wrapper">
+            <div class="col- collection-item" data-item="men" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr1.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="women" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr2.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="men" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr3.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="sports" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr4.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="men" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr5.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="women" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr6.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="sports" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr7.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col- collection-item" data-item="men" data-aos="zoom-in-up">
+                <figure><img src="asses/products/pr8.png" alt=""></figure>
+                <div class="col-body">
+                    <p class="rating-icon"><i class="fa-solid fa-star"></i> <span class="rating-num">4.9</span></p>
+                    <h3 class="heading-three">nike running</h3>
+                    <p class="sub-heading">air zoom pagasus</p>
+                    <div class="col-footer">
+                        <p class="shoe-price">Rp. 1.099.000</p>
+                        <button class="shoe-btn btn" onclick="window.location.href='payment.html';">buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- customer review -->
+    <section class="container testimonial">
+        <div class="clr-one"></div>
+        <div class="section-heading">
+            <div class="heading">
+                <p class="sub-heading">testimonial</p>
+                <h2 class="heading-two">what our customer says</h2>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col" data-aos="zoom-in-up">
+                <figure><img src="asses/testimonail/tes-1.png" alt=""></figure>
+                <h3 class="heading-three">Agus Satu</h3>
+                <p class="testi-message">Sepatunya bagus, sesuai dengan gambar</p>
+                <span class="ratting"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                        class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                        class="fa-solid fa-star"></i></span>
+            </div>
+
+            <div class="col" data-aos="zoom-in-up">
+                <figure><img src="asses/testimonail/tes-2.png" alt=""></figure>
+                <h3 class="heading-three">Agus Dua</h3>
+                <p class="testi-message">Pesanan sepatunya sangat cepat sampai</p>
+                <span class="ratting"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                        class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                        class="fa-solid fa-star"></i></span>
+            </div>
+
+            <div class="col" data-aos="zoom-in-up">
+                <figure><img src="asses/testimonail/tes-3.png" alt=""></figure>
+                <h3 class="heading-three">Agus Tiga</h3>
+                <p class="testi-message">Kualitas sepatunya bagus, pesanan cepat sampai</p>
+                <span class="ratting"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                        class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                        class="fa-solid fa-star"></i></span>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe for news latest updates section -->
+    <section class="container subscribe">
+        <div class="wrapper">
+            <h2 class="heading-two">subscribe for news and latest updates</h2>
+            <form>
+                <input type="email" class="email" placeholder="ex@gmail.com" >
+                <button class="btn">subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- webstie footer -->
+    <footer class="container">
+        <div class="wrapper">
+            <div class="col" data-aos="zoom-in">
+                <a href="index.html" class="logo">shoeskom</a>
+                <p class="about-website">Jadikan pengalaman baru <br> dengan mempercayakan semua kebutuhan <br> sepatu anda pada toko shoeskom</p>
+            </div>
+            <div class="col" data-aos="zoom-in">
+                <h4>quick links</h4>
+                <a href="index.html">home</a>
+                <a href="">about</a>
+                <a href="">new arrival</a>
+                <a href="">best collection</a>
+            </div>
+            <div class="col" data-aos="zoom-in">
+                <h4>contact us</h4>
+                <p>shoeskom@kommers.com</p>
+                <p>+62 220030</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

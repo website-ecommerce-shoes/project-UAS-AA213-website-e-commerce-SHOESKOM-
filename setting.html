@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #2b0148;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .settings-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .settings-header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .settings-section {
+            margin-bottom: 20px;
+        }
+
+        .settings-section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .settings-section label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .settings-section input,
+        .settings-section select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .settings-actions {
+            text-align: center;
+        }
+
+        .settings-actions button {
+            padding: 10px 20px;
+            background-color: #6e00b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .settings-actions button:hover {
+            background-color: #550091;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">SHOESKOM</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="keranjang.html">Wishlist</a></li>
+                <li><a href="keranjang.html">Orders</a></li>
+                <li><a href="setting.html" class="active"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="settings-container">
+        <div class="settings-header">
+            <h1>Account Settings</h1>
+        </div>
+
+        <div class="settings-section">
+            <h2>Personal Information</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="settings-section">
+            <h2>Security</h2>
+            <label for="password">New Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password">
+        </div>
+
+        <div class="settings-section">
+            <h2>Preferences</h2>
+            <label for="language">Language</label>
+            <select id="language" name="language">
+                <option value="en">English</option>
+                <option value="id">Bahasa Indonesia</option>
+            </select>
+
+            <label for="timezone">Timezone</label>
+            <select id="timezone" name="timezone">
+                <option value="gmt">GMT</option>
+                <option value="wib">WIB</option>
+                <option value="wita">WITA</option>
+                <option value="wit">WIT</option>
+            </select>
+        </div>
+
+        <div class="settings-actions">
+            <button type="submit">Save Changes</button>
+            <link rel="stylesheet" href="profile.html">
+        </div>
+    </div>
+</body>
+
+</html>
